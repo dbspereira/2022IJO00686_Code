@@ -1,16 +1,16 @@
 ########################################################################
-#Universidade do Estado de São Paulo - USP
-#Faculdade de Saúde Pública - FSP
-#Programa de Pós Graduação em Nutrição em Saúde Pública - PPGNSP
-#Laboratório de Avaliação do Estado Nutricional de Populações - LANPOP
-#Variação o peso corporal ao longo da fase adulta: uma análise da NHANES 1999-2019
-#Versão Final - 10/20
-#Autora: Debora dos Santos Pereira
+#Universidade do Estado de SÃ£o Paulo - USP
+#Faculdade de SaÃºde PÃºblica - FSP
+#Programa de PÃ³s GraduaÃ§Ã£o em NutriÃ§Ã£o em SaÃºde PÃºblica - PPGNSP
+#LaboratÃ³rio de AvaliaÃ§Ã£o do Estado Nutricional de PopulaÃ§Ãµes - LANPOP
+#VariaÃ§Ã£o o peso corporal ao longo da fase adulta: uma anÃ¡lise da NHANES 1999-2019
+#VersÃ£o Final - 10/20
+#Autora: Debora Borges dos Santos Pereira
 #Co-Autora: Claudia Cristina Vieira Pastorello
 #Co-Autora: Mariane Helen de Oliveria
 #Co-Autora: Iolanda Karla Santana dos Santos
 #Co-Autora: Camila Medeiros da Silva Mazzeti
-#Orientação: Wolney Lisboa Conde
+#OrientaÃ§Ã£o: Wolney Lisboa Conde
 ########################################################################
 
 #pacotes utilizados
@@ -40,12 +40,11 @@ library(summarytools)
 library(glue)
 library(stats)
 
-# ATENÇÃO: 
-# mude o caminho para a pasta onde os dados estão na sua máquina
+
 
 setwd("C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA")
 
-# População geral 
+# PopulaÃ§Ã£o geral 
 NH_GERAL <- read.csv('NH_GERAL_MA.csv')
 
 # Mulheres
@@ -54,7 +53,7 @@ NH_FEM <- read.csv('NH_FEM_MA.csv')
 # Homens
 NH_MA_MASC <- read.csv('NH_MASC_MA.csv')
 
-# Gerações
+# GeraÃ§Ãµes
 NH_G1 <- read.csv('NH_G1_MA.csv')
 NH_G2 <- read.csv('NH_G2_MA.csv')
 NH_G3 <- read.csv('NH_G3_MA.csv')
@@ -209,7 +208,7 @@ NHS_molted_MA_MASC$idadedoimc <- as.factor(NHS_molted_MA_MASC$idadedoimc)
 NHS_molted_MA_MASC <- subset(NHS_molted_MA_MASC, NHS_molted_MA_MASC$idade > 20)
 write.csv(NHS_molted_MA_MASC, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_MASC_FINAL.csv")
 
-#Criando base de dados de interesse (ABT) GERAÇÃO 1 (Nasc <= 1950)
+#Criando base de dados de interesse (ABT) GERAÃ‡ÃƒO 1 (Nasc <= 1950)
 
 NH_ABT <- cbind(NH_G1$imcatual, 
                 NH_G1$imc1ano, 
@@ -256,7 +255,7 @@ NHS_molted_G1$idadedoimc <- ifelse(NHS_molted_G1$tempo == 25, 25,
 NHS_molted_G1$idadedoimc <- as.factor(NHS_molted_G1$idadedoimc)
 write.csv(NHS_molted_G1, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_G1_FINAL.csv")
 
-#Criando base de dados de interesse (ABT) GERAÇÃO 2 (Nasc entre 1950 e 1960)
+#Criando base de dados de interesse (ABT) GERAÃ‡ÃƒO 2 (Nasc entre 1950 e 1960)
 
 NH_ABT <- cbind(NH_G2$imcatual, 
                 NH_G2$imc1ano, 
@@ -303,7 +302,7 @@ NHS_molted_G2$idadedoimc <- ifelse(NHS_molted_G2$tempo == 25, 25,
 NHS_molted_G2$idadedoimc <- as.factor(NHS_molted_G2$idadedoimc)
 write.csv(NHS_molted_G2, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_G2_FINAL.csv")
 
-#Criando base de dados de interesse (ABT) GERAÇÃO 3 (Nasc entre 1960 e 1970)
+#Criando base de dados de interesse (ABT) GERAÃ‡ÃƒO 3 (Nasc entre 1960 e 1970)
 
 NH_ABT <- cbind(NH_G3$imcatual, 
                 NH_G3$imc1ano, 
@@ -350,7 +349,7 @@ NHS_molted_G3$idadedoimc <- ifelse(NHS_molted_G3$tempo == 25, 25,
 NHS_molted_G3$idadedoimc <- as.factor(NHS_molted_G3$idadedoimc)
 write.csv(NHS_molted_G3, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_G3_FINAL.csv")
 
-#Criando base de dados de interesse (ABT) GERAÇÃO 4 (Nasc acima de 1970)
+#Criando base de dados de interesse (ABT) GERAÃ‡ÃƒO 4 (Nasc acima de 1970)
 
 NH_ABT <- cbind(NH_G4$imcatual, 
                 NH_G4$imc1ano, 
@@ -585,12 +584,12 @@ NHS_molted_EN4$idadedoimc <- ifelse(NHS_molted_EN4$tempo == 25, 25,
 NHS_molted_EN4$idadedoimc <- as.factor(NHS_molted_EN4$idadedoimc)
 write.csv(NHS_molted_EN4, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_EN4_FINAL.csv")
 
-# ATENÇÃO: .
-# mude o caminho para a pasta onde os dados estão na sua máquina
+# ATENÃ‡ÃƒO: .
+# mude o caminho para a pasta onde os dados estÃ£o na sua mÃ¡quina
 
 setwd("C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA")
 
-# População geral 
+# PopulaÃ§Ã£o geral 
 NH_GERAL_NTOTAL <- read.csv('NH_GERAL_MA.csv')
 summary(NH_GERAL_NTOTAL)
 menosdetrintaecinco <- subset(NH_GERAL_NTOTAL, NH_GERAL_NTOTAL$RIDAGEYR < 35)
@@ -615,7 +614,7 @@ NH_FEM <- read.csv('NHS_molted_FEM_FINAL.csv')
 # Homens
 NH_MASC <- read.csv('NHS_molted_MASC_FINAL.csv')
 
-# Gerações
+# GeraÃ§Ãµes
 NH_G1 <- read.csv('NHS_molted_G1_FINAL.csv')
 
 NH_G2 <- read.csv('NHS_molted_G2_FINAL.csv')
@@ -776,7 +775,7 @@ ggplot(NH_SEX, aes(x=idadedoimc, y=media_imc, group=sexo, color=sexo)) +
                      breaks = seq(20,35, by=5))   +
   geom_line() + geom_point()+ geom_smooth()+
   scale_color_brewer(palette="Paired")+theme_minimal()+ 
-  labs(colour = "Sexo", x = 'age (years)', y='Body Mass Index (Kg/m²)',
+  labs(colour = "Sexo", x = 'age (years)', y='Body Mass Index (Kg/mÂ²)',
        tag = 'Fixed-effects Multilevel Analysis by Sex Stratification',
        caption = "Source: NHANES 1999-2020 Adults (18 to 65 years old)") +
   theme(plot.title.position = "plot",
@@ -796,7 +795,7 @@ ggplot(NH_SEX, aes(x=idadedoimc, y=media_imc, group=sexo, color=sexo)) +
   geom_hline(yintercept=25, color="black", size=0.5, linetype = 'dashed') + 
   geom_hline(yintercept=30, color="black", size=0.5, linetype = 'dashed') 
 
-# Multinivel Geração 1
+# Multinivel GeraÃ§Ã£o 1
 NH_G1$idadedoimc <- as.factor(as.character(NH_G1$idadedoimc))
 mod_G1 <- lmer(imc ~ idadedoimc +( 1 | id), data=NH_G1)
 mod_G1
@@ -825,7 +824,7 @@ MSE_G1
 LogLikelyhood_G1 <- logLik(mod_G1, REML = FALSE)
 LogLikelyhood_G1
 
-# Multinivel Geração 2
+# Multinivel GeraÃ§Ã£o 2
 NH_G2$idadedoimc <- as.factor(as.character(NH_G2$idadedoimc))
 mod_G2 <- lmer(imc ~ idadedoimc +( 1 | id), data=NH_G2)
 mod_G2
@@ -855,7 +854,7 @@ LogLikelyhood_G2 <- logLik(mod_G2, REML = FALSE)
 LogLikelyhood_G2
 
 
-# Multinivel Geração 3
+# Multinivel GeraÃ§Ã£o 3
 NH_G3$idadedoimc<- as.factor(as.character(NH_G3$idadedoimc))
 mod_G3 <- lmer(imc ~ idadedoimc +( 1 | id), data=NH_G3)
 mod_G3
@@ -884,7 +883,7 @@ MSE_G3
 LogLikelyhood_G3 <- logLik(mod_G3, REML = FALSE)
 LogLikelyhood_G3
 
-# Multinivel Geração 4
+# Multinivel GeraÃ§Ã£o 4
 NH_G4$idadedoimc <- as.factor(as.character(NH_G4$idadedoimc))
 mod_G4 <- lmer(imc ~ idadedoimc +( 1 | id), data=NH_G4)
 mod_G4
@@ -914,7 +913,7 @@ LogLikelyhood_G4 <- logLik(mod_G4, REML = FALSE)
 LogLikelyhood_G4
 
 
-# plot por Geração do modelo de efeitos fixos
+# plot por GeraÃ§Ã£o do modelo de efeitos fixos
 idadedoimc_G1 <- 40:65
 G1 <- rep('Baixo peso',25)
 
@@ -990,7 +989,7 @@ colnames(MOD_NH_G4) <- c('idadedoimc', 'media_imc',
                          'desvio_padrao_imc',
                          'estado_nutricional')
 
-#remoção de ruído gerado no loop geracional
+#remoÃ§Ã£o de ruÃ­do gerado no loop geracional
 MOD_NH_G1 <- MOD_NH_G1[-27,]
 MOD_NH_G2 <- MOD_NH_G2[-37,]
 MOD_NH_G3 <- MOD_NH_G3[-c(41,42,43),]
@@ -1015,7 +1014,7 @@ ggplot(NH_G, aes(x=idadedoimc, y=media_imc, group=geracao, colour=geracao)) +
   scale_y_continuous(limits = c(20,35), 
                      breaks = seq(20,35, by=5))   +
   scale_color_brewer(palette="Paired",)+theme_minimal()+
-  labs(colour = "Generation", x = 'age (years)', y='Body Mass Index (Kg/m²)',
+  labs(colour = "Generation", x = 'age (years)', y='Body Mass Index (Kg/mÂ²)',
        tag = 'Fixed-effects Multilevel Analysis by Generation Stratification',
        caption = "Source: NHANES 1999-2018 Adults (18 to 65 years old)") +
   theme(plot.title.position = "plot",
@@ -1251,7 +1250,7 @@ ggplot(NH_EN, aes(x=idadedoimc, y=media_imc, group=estado_nutricional, color=est
                      labels=glue("{seq(18,65,5)} years"))  +
   scale_y_continuous(limits = c(15,45), 
                      breaks = seq(15,45, by=5))   +
-  labs(colour = "Income",x = '', y='Body Mass Index (Kg/m²)',
+  labs(colour = "Income",x = '', y='Body Mass Index (Kg/mÂ²)',
        tag = 'Fixed-effects Multilevel Analysis by Nutritional Status at 25 years old Stratification',
 caption = "Source: NHANES 1999-2020 Adults (18 to 65 years old)") +
   theme(plot.title.position = "plot",
@@ -1327,7 +1326,7 @@ ggplot() +
                                                                      "green","pink"))
                                                                      
 
-# linear Geração
+# linear GeraÃ§Ã£o
 
 lin_NHG1 <- NH_G1 %>% group_by(idadedoimc) %>%
   summarise_at(vars(imc), funs(mean(., na.rm=TRUE)))
