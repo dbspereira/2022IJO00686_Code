@@ -122,7 +122,7 @@ NHS_molted_GERAL$tempo <- as.numeric(as.character(NHS_molted_GERAL$tempo))
 NHS_molted_GERAL$idadedoimc <- ifelse(NHS_molted_GERAL$tempo == 25, 25, 
                                       NHS_molted_GERAL$idade - NHS_molted_GERAL$tempo)
 NHS_molted_GERAL$idadedoimc <- as.factor(NHS_molted_GERAL$idadedoimc)
-write.csv(NHS_molted_GERAL, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_GERAL_FINAL.csv")
+write.csv(NHS_molted_GERAL, "C:/Users/Débora/Desktop/contra prova/NHS_molted_GERAL_FINAL.csv")
 
 #Criando base de dados de interesse (ABT) SEXO FEMININO
 
@@ -169,7 +169,7 @@ NHS_molted_FEM$tempo <- as.numeric(as.character(NHS_molted_FEM$tempo))
 NHS_molted_FEM$idadedoimc <- ifelse(NHS_molted_FEM$tempo == 25, 25, 
                                     NHS_molted_FEM$idade - NHS_molted_FEM$tempo)
 NHS_molted_FEM$idadedoimc <- as.factor(NHS_molted_FEM$idadedoimc)
-write.csv(NHS_molted_FEM, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_FEM_FINAL.csv")
+write.csv(NHS_molted_FEM, "C:/Users/Débora/Desktop/contra prova/NHS_molted_FEM_FINAL.csv")
 
 #Criando base de dados de interesse (ABT) SEXO MASCULINO
 
@@ -217,7 +217,7 @@ NHS_molted_MA_MASC$idadedoimc <- ifelse(NHS_molted_MA_MASC$tempo == 25, 25,
                                         NHS_molted_MA_MASC$idade - NHS_molted_MA_MASC$tempo)
 NHS_molted_MA_MASC$idadedoimc <- as.factor(NHS_molted_MA_MASC$idadedoimc)
 NHS_molted_MA_MASC <- subset(NHS_molted_MA_MASC, NHS_molted_MA_MASC$idade > 20)
-write.csv(NHS_molted_MA_MASC, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_MASC_FINAL.csv")
+write.csv(NHS_molted_MA_MASC, "C:/Users/Débora/Desktop/contra prova/NHS_molted_MASC_FINAL.csv")
 
 #Criando base de dados de interesse (ABT) GERAÇÃO 1 (Nasc <= 1950)
 
@@ -264,7 +264,7 @@ NHS_molted_G1$tempo <- as.numeric(as.character(NHS_molted_G1$tempo))
 NHS_molted_G1$idadedoimc <- ifelse(NHS_molted_G1$tempo == 25, 25, 
                                    NHS_molted_G1$idade - NHS_molted_G1$tempo)
 NHS_molted_G1$idadedoimc <- as.factor(NHS_molted_G1$idadedoimc)
-write.csv(NHS_molted_G1, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_G1_FINAL.csv")
+write.csv(NHS_molted_G1, "C:/Users/Débora/Desktop/contra prova/NHS_molted_G1_FINAL.csv")
 
 #Criando base de dados de interesse (ABT) GERAÇÃO 2 (Nasc entre 1950 e 1960)
 
@@ -311,7 +311,7 @@ NHS_molted_G2$tempo <- as.numeric(as.character(NHS_molted_G2$tempo))
 NHS_molted_G2$idadedoimc <- ifelse(NHS_molted_G2$tempo == 25, 25, 
                                    NHS_molted_G2$idade - NHS_molted_G2$tempo)
 NHS_molted_G2$idadedoimc <- as.factor(NHS_molted_G2$idadedoimc)
-write.csv(NHS_molted_G2, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_G2_FINAL.csv")
+write.csv(NHS_molted_G2, "C:/Users/Débora/Desktop/contra prova/NHS_molted_G2_FINAL.csv")
 
 #Criando base de dados de interesse (ABT) GERAÇÃO 3 (Nasc entre 1960 e 1970)
 
@@ -358,7 +358,7 @@ NHS_molted_G3$tempo <- as.numeric(as.character(NHS_molted_G3$tempo))
 NHS_molted_G3$idadedoimc <- ifelse(NHS_molted_G3$tempo == 25, 25, 
                                    NHS_molted_G3$idade - NHS_molted_G3$tempo)
 NHS_molted_G3$idadedoimc <- as.factor(NHS_molted_G3$idadedoimc)
-write.csv(NHS_molted_G3, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_G3_FINAL.csv")
+write.csv(NHS_molted_G3, "C:/Users/Débora/Desktop/contra prova/NHS_molted_G3_FINAL.csv")
 
 #Criando base de dados de interesse (ABT) GERAÇÃO 4 (Nasc acima de 1970)
 
@@ -405,7 +405,7 @@ NHS_molted_G4$tempo <- as.numeric(as.character(NHS_molted_G4$tempo))
 NHS_molted_G4$idadedoimc <- ifelse(NHS_molted_G4$tempo == 25, 25, 
                                    NHS_molted_G4$idade - NHS_molted_G4$tempo)
 NHS_molted_G4$idadedoimc <- as.factor(NHS_molted_G4$idadedoimc)
-write.csv(NHS_molted_G4, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_G4_FINAL.csv")
+write.csv(NHS_molted_G4, "C:/Users/Débora/Desktop/contra prova/NHS_molted_G4_FINAL.csv")
 
 #Criando base de dados de interesse (ABT) Estado Nutricional 0 Baixa
 
@@ -499,7 +499,7 @@ NHS_molted_EN2$tempo <- as.numeric(as.character(NHS_molted_EN2$tempo))
 NHS_molted_EN2$idadedoimc <- ifelse(NHS_molted_EN2$tempo == 25, 25, 
                                     NHS_molted_EN2$idade - NHS_molted_EN2$tempo)
 NHS_molted_EN2$idadedoimc <- as.factor(NHS_molted_EN2$idadedoimc)
-write.csv(NHS_molted_EN2, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_EN2_FINAL.csv")
+write.csv(NHS_molted_EN2, "C:/Users/Débora/Desktop/contra prova/NHS_molted_EN2_FINAL.csv")
 
 #Criando base de dados de interesse (ABT) Estado Nutricional 2 Alta 
 
@@ -546,7 +546,7 @@ NHS_molted_EN3$tempo <- as.numeric(as.character(NHS_molted_EN3$tempo))
 NHS_molted_EN3$idadedoimc <- ifelse(NHS_molted_EN3$tempo == 25, 25, 
                                     NHS_molted_EN3$idade - NHS_molted_EN3$tempo)
 NHS_molted_EN3$idadedoimc <- as.factor(NHS_molted_EN3$idadedoimc)
-write.csv(NHS_molted_EN3, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_EN3_FINAL.csv")
+write.csv(NHS_molted_EN3, "C:/Users/Débora/Desktop/contra prova/NHS_molted_EN3_FINAL.csv")
 
 #Criando base de dados de interesse (ABT) Estado Nutricional 3 Muito Alta
 
@@ -593,7 +593,7 @@ NHS_molted_EN4$tempo <- as.numeric(as.character(NHS_molted_EN4$tempo))
 NHS_molted_EN4$idadedoimc <- ifelse(NHS_molted_EN4$tempo == 25, 25, 
                                     NHS_molted_EN4$idade - NHS_molted_EN4$tempo)
 NHS_molted_EN4$idadedoimc <- as.factor(NHS_molted_EN4$idadedoimc)
-write.csv(NHS_molted_EN4, "C:/Users/Cacau Pastorello/Desktop/NHANES_DEBORA/NHS_molted_EN4_FINAL.csv")
+write.csv(NHS_molted_EN4, "C:/Users/Débora/Desktop/contra prova/NHS_molted_EN4_FINAL.csv")
 
 # ATENÇÃO: .
 # mude o caminho para a pasta onde os dados estão na sua máquina
